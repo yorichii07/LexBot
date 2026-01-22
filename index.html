@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LexBot - Legal Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="home.html" class="nav-logo">
+                    <i class="fas fa-gavel"></i> LexBot
+                </a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="home.html" class="nav-link">Home</a>
+                <a href="index.html" class="nav-link active">Chat Bot</a>
+                <a href="categories.html" class="nav-link">Categories</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Floating Navigation Ball -->
+    <div class="floating-nav" id="floatingNav">
+        <button class="float-btn main-btn" id="floatToggle">
+            <i class="fas fa-compass"></i>
+        </button>
+        <a href="home.html" class="float-btn home-btn" title="Home">
+            <i class="fas fa-home"></i>
+        </a>
+        <a href="index.html" class="float-btn chat-btn" title="Chatbot">
+            <i class="fas fa-comments"></i>
+        </a>
+        <a href="categories.html" class="float-btn categories-btn" title="Categories">
+            <i class="fas fa-list"></i>
+        </a>
+    </div>
+
+    <header>
+        <h1><span class="lex">Lex</span><span class="bot">Bot</span> - <span class="law-finder">Legal Assistant</span></h1>
+    </header>
+    <div class="chat-container">
+        <div class="chat-header">Legal Assistant</div>
+        <div id="chat-messages" class="chat-messages"></div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Ask about any law...">
+            <button id="send-button" type="button">Send ➤</button>
+            <button id="micButton" type="button">🎤</button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-sections">
+            <div class="footer-section">
+                <a href="home.html">Home</a>
+            </div>
+            <div class="footer-section">
+                <a href="categories.html">View Law Categories</a>
+            </div>
+        </div>
+        <p class="rights-reserved">© 2025 LexBot. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

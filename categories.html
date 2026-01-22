@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LexBot - Law Categories</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="home.html" class="nav-logo">
+                    <i class="fas fa-gavel"></i> LexBot
+                </a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="home.html" class="nav-link">Home</a>
+                <a href="index.html" class="nav-link">Chat Bot</a>
+                <a href="categories.html" class="nav-link active">Categories</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Floating Navigation Ball -->
+    <div class="floating-nav" id="floatingNav">
+        <button class="float-btn main-btn" id="floatToggle">
+            <i class="fas fa-compass"></i>
+        </button>
+        <a href="home.html" class="float-btn home-btn" title="Home">
+            <i class="fas fa-home"></i>
+        </a>
+        <a href="index.html" class="float-btn chat-btn" title="Chatbot">
+            <i class="fas fa-comments"></i>
+        </a>
+        <a href="categories.html" class="float-btn categories-btn" title="Categories">
+            <i class="fas fa-list"></i>
+        </a>
+    </div>
+
+    <header>
+        <h1><span class="lex">Lex</span><span class="bot">Bot</span> - <span class="law-finder">Law Finder</span></h1>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search laws...">
+            <button id="micButton"><i class="fas fa-microphone"></i></button>
+        </div>
+    </header>
+    <section class="law-categories">
+        <div class="category">
+            <h2>Traffic Laws</h2>
+            <ul>
+                <li>Speed Limits</li>
+                <li>Drunk Driving</li>
+                <li>Helmet Rules</li>
+            </ul>
+        </div>
+        <div class="category">
+            <h2>Cyber Laws</h2>
+            <ul>
+                <li>Data Privacy</li>
+                <li>Cyber Crime</li>
+                <li>Hacking Laws</li>
+            </ul>
+        </div>
+        <div class="category">
+            <h2>Property Laws</h2>
+            <ul>
+                <li>Land Rights</li>
+                <li>Property Tax</li>
+                <li>Ownership Disputes</li>
+            </ul>
+        </div>
+        <div class="category">
+            <h2>Criminal Laws</h2>
+            <ul>
+                <li>Theft & Robbery</li>
+                <li>Assault & Violence</li>
+                <li>Fraud & Scams</li>
+            </ul>
+        </div>
+        <div class="category">
+            <h2>Family Laws</h2>
+            <ul>
+                <li>Marriage Laws</li>
+                <li>Divorce Laws</li>
+                <li>Child Custody</li>
+            </ul>
+        </div>
+        <div class="category">
+            <h2>Business Laws</h2>
+            <ul>
+                <li>Corporate Regulations</li>
+                <li>Tax Compliance</li>
+                <li>Consumer Rights</li>
+            </ul>
+        </div>
+        <div class="category">
+            <h2>Consumer Laws</h2>
+            <ul>
+                <li>Consumer Rights</li>
+                <li>Product Liability</li>
+                <li>False Advertising</li>
+            </ul>
+        </div>
+        <div class="category">
+            <h2>Employment Laws</h2>
+            <ul>
+                <li>Worker Rights</li>
+                <li>Workplace Safety</li>
+                <li>Minimum Wage Laws</li>
+            </ul>
+        </div>
+        <div class="category">
+            <h2>Environmental Laws</h2>
+            <ul>
+                <li>Pollution Control</li>
+                <li>Wildlife Protection</li>
+                <li>Climate Change Regulations</li>
+            </ul>
+        </div>
+        <div class="category">
+            <h2>Constitutional Laws</h2>
+            <ul>
+                <li>Fundamental Rights</li>
+                <li>Duties of Citizens</li>
+                <li>Separation of Powers</li>
+            </ul>
+        </div>
+        <div class="category">
+            <h2>Contract Laws</h2>
+            <ul>
+                <li>Breach of Contract</li>
+                <li>Agreements & Clauses</li>
+                <li>Business Contracts</li>
+            </ul>
+        </div>
+        <div class="category">
+            <h2>Immigration Laws</h2>
+            <ul>
+                <li>Visa & Residency</li>
+                <li>Deportation Rules</li>
+                <li>Citizenship Process</li>
+            </ul>
+        </div>
+        <div class="category">
+            <h2>Intellectual Property Laws</h2>
+            <ul>
+                <li>Copyright & Trademarks</li>
+                <li>Patent Protection</li>
+                <li>Trade Secrets</li>
+            </ul>
+        </div>
+        <div class="category">
+            <h2>Taxation Laws</h2>
+            <ul>
+                <li>Income Tax Rules</li>
+                <li>GST & VAT Regulations</li>
+                <li>Tax Filing Procedures</li>
+            </ul>
+        </div>
+        <div class="category">
+            <h2>Banking & Finance Laws</h2>
+            <ul>
+                <li>Loan & Credit Rules</li>
+                <li>Investment Protection</li>
+                <li>Consumer Banking Rights</li>
+            </ul>
+        </div>
+        <div class="category">
+            <h2>Education Laws</h2>
+            <ul>
+                <li>Right to Education</li>
+                <li>School & College Regulations</li>
+                <li>Student Loan Policies</li>
+            </ul>
+        </div>
+        <div class="category">
+            <h2>Health & Medical Laws</h2>
+            <ul>
+                <li>Patient Rights</li>
+                <li>Medical Malpractice</li>
+                <li>Health Insurance Rules</li>
+            </ul>
+        </div>
+        <div class="category">
+            <h2>Human Rights Laws</h2>
+            <ul>
+                <li>Freedom of Speech</li>
+                <li>Anti-Discrimination Laws</li>
+                <li>Rights of Minorities</li>
+            </ul>
+        </div>
+        <div class="category">
+            <h2>Military & Defense Laws</h2>
+            <ul>
+                <li>National Security Laws</li>
+                <li>War & Conflict Regulations</li>
+                <li>Military Service Rules</li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-sections">
+            <div class="footer-section">
+                <a href="home.html">Home</a>
+            </div>
+            <div class="footer-section">
+                <a href="index.html">Chat Bot</a>
+            </div>
+            <div class="footer-section">
+                <a href="categories.html">Categories</a>
+            </div>
+        </div>
+        <p class="rights-reserved">© 2025 LexBot. All Rights Reserved.</p>
+    </footer>
+</body>
+</html> 

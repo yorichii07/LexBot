@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LexBot - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="home.html" class="nav-logo">
+                    <i class="fas fa-gavel"></i> LexBot
+                </a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="home.html" class="nav-link active">Home</a>
+                <a href="index.html" class="nav-link">Chat Bot</a>
+                <a href="categories.html" class="nav-link">Categories</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Floating Navigation Ball -->
+    <div class="floating-nav" id="floatingNav">
+        <button class="float-btn main-btn" id="floatToggle">
+            <i class="fas fa-compass"></i>
+        </button>
+        <a href="home.html" class="float-btn home-btn" title="Home">
+            <i class="fas fa-home"></i>
+        </a>
+        <a href="index.html" class="float-btn chat-btn" title="Chatbot">
+            <i class="fas fa-comments"></i>
+        </a>
+        <a href="categories.html" class="float-btn categories-btn" title="Categories">
+            <i class="fas fa-list"></i>
+        </a>
+    </div>
+
+    <header class="home-header">
+        <h1><span class="lex">Lex</span><span class="bot">Bot</span> - <span class="law-finder">Your Legal Assistant</span></h1>
+        <p class="subtitle">Explore Indian Laws with Interactive Tools</p>
+    </header>
+
+    <main class="home-container">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h2>Welcome to LexBot</h2>
+                <p>Your intelligent companion for understanding Indian laws and legal concepts</p>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <h3>Smart Chat Assistant</h3>
+                <p>Ask questions about any law in India and get instant responses from our AI assistant</p>
+                <a href="index.html" class="feature-btn">
+                    Go to Chat <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-folder-open"></i>
+                </div>
+                <h3>Browse Categories</h3>
+                <p>Explore different law categories and subcategories with detailed information</p>
+                <a href="categories.html" class="feature-btn">
+                    Explore Categories <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-microphone"></i>
+                </div>
+                <h3>Voice Search</h3>
+                <p>Search for laws using voice commands for hands-free browsing experience</p>
+                <a href="index.html" class="feature-btn">
+                    Try Voice <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="quick-nav-section">
+            <h2>Quick Navigation</h2>
+            <div class="quick-nav-grid">
+                <a href="index.html" class="quick-nav-item">
+                    <span class="icon"><i class="fas fa-robot"></i></span>
+                    <span class="text">Chat Bot</span>
+                </a>
+                <a href="categories.html" class="quick-nav-item">
+                    <span class="icon"><i class="fas fa-book"></i></span>
+                    <span class="text">Law Categories</span>
+                </a>
+                <a href="categories.html" class="quick-nav-item">
+                    <span class="icon"><i class="fas fa-search"></i></span>
+                    <span class="text">Search Laws</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="categories-preview">
+            <h2>Featured Categories</h2>
+            <div class="preview-grid">
+                <div class="preview-item" onclick="teleportToCategory('Traffic Laws')">
+                    <i class="fas fa-car"></i>
+                    <h4>Traffic Laws</h4>
+                </div>
+                <div class="preview-item" onclick="teleportToCategory('Cyber Laws')">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Cyber Laws</h4>
+                </div>
+                <div class="preview-item" onclick="teleportToCategory('Property Laws')">
+                    <i class="fas fa-home"></i>
+                    <h4>Property Laws</h4>
+                </div>
+                <div class="preview-item" onclick="teleportToCategory('Criminal Laws')">
+                    <i class="fas fa-gavel"></i>
+                    <h4>Criminal Laws</h4>
+                </div>
+                <div class="preview-item" onclick="teleportToCategory('Family Laws')">
+                    <i class="fas fa-users"></i>
+                    <h4>Family Laws</h4>
+                </div>
+                <div class="preview-item" onclick="teleportToCategory('Employment Laws')">
+                    <i class="fas fa-briefcase"></i>
+                    <h4>Employment Laws</h4>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-sections">
+            <div class="footer-section">
+                <a href="index.html">Chat Bot</a>
+            </div>
+            <div class="footer-section">
+                <a href="categories.html">Categories</a>
+            </div>
+            <div class="footer-section">
+                <a href="home.html">Home</a>
+            </div>
+        </div>
+        <p class="rights-reserved">© 2025 LexBot. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Teleport to category with animation
+        function teleportToCategory(categoryName) {
+            sessionStorage.setItem('searchQuery', categoryName);
+            sessionStorage.setItem('selectedCategory', categoryName);
+            
+            // Add fade out animation
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease-out';
+            
+            setTimeout(() => {
+                window.location.href = 'categories.html';
+            }, 300);
+        }
+
+        // Navigation animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('navMenu');
+            const floatToggle = document.getElementById('floatToggle');
+            const floatingNav = document.getElementById('floatingNav');
+
+            if (hamburger) {
+                hamburger.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    hamburger.classList.toggle('active');
+                });
+            }
+
+            if (floatToggle) {
+                floatToggle.addEventListener('click', () => {
+                    floatingNav.classList.toggle('expanded');
+                });
+            }
+
+            // Fade in on page load
+            document.body.style.opacity = '1';
+            document.body.style.transition = 'opacity 0.5s ease-in';
+        });
+    </script>
+</body>
+</html>
